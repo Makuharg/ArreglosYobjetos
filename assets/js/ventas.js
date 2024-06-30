@@ -1,3 +1,4 @@
+// Arreglo con propiedades en venta
 const propiedadesVenta = [
     {
         nombre: 'Apartamento de lujo en zona exclusiva',
@@ -56,7 +57,7 @@ const propiedadesVenta = [
     }
 ];
 
-// Creando la galeria de propiedades en venta
+// Creando bucle for para recorrer el arreglo
 
 const ventasProp = document.querySelector(".propiedades-venta");
 
@@ -67,6 +68,7 @@ for (let ventas of propiedadesVenta) {
     let fumar = "";
     let animales = "";
 
+    // Creando la condicion de Pets y Smoke
     if (ventas.smoke === true) {
         fumar = `<p style="color: green"><i class="fa-solid fa-smoking"></i>Permitido fumar</p>`
     } else {
@@ -79,6 +81,7 @@ for (let ventas of propiedadesVenta) {
         animales = `<p style="color: red"><i class="fa-solid fa-ban"></i>No se permiten mascotas</p>`
     }
 
+    // Guardando la galeria de propiedades en una variable
     html1 += `
         <div class="cards">
             <img class="ventas-img" src="${ventas.src}">
@@ -101,5 +104,5 @@ for (let ventas of propiedadesVenta) {
         </div>
     `
 }
-
+// Creando la galeria de propiedades
 ventasProp.innerHTML = html1;
